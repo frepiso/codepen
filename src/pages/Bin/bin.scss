@@ -1,0 +1,183 @@
+@import '../../utils/variables.scss';
+
+.page-bin-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bin-nav {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  .bin-nav-left {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    h3 {
+      margin: 0;
+    }
+  }
+  .bin-nav-right {
+    @extend .bin-nav-left;
+    justify-content: flex-end;
+  }
+  button {
+    height: 100%;
+    &:focus {
+      box-shadow: 0;
+      outline: 0;
+      border: 0;
+    }
+  }
+}
+
+.bin-nav-name-input {
+  font-size: 25px;
+  background: $gray-900 !important;
+  border: 0;
+  border-bottom: 1px solid $gray-200;
+  color: $gray-400 !important;
+}
+
+.bin-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  @media screen and (min-width: $screen-sm) {
+    flex-direction: row;
+  }
+}
+
+.iframe-container {
+  all: unset;
+  position: relative;
+  background: white;
+  height: 100vh;
+  min-width: 125px;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  z-index: 1;
+}
+
+.editor-panel-container {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  @media screen and (min-width: $screen-sm) {
+    min-width: 200px;
+    max-width: 100vw;
+    height: 100vh;
+  }
+}
+
+.editor-panel {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+  @media screen and (min-width: $screen-sm) {
+    height: 100vh;
+  }
+}
+
+.editor-tabs {
+  display: flex;
+  background: $gray-800;
+  .tab {
+    flex: 1;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  .active-btn {
+    background: $gray-800 !important;
+  }
+}
+
+.editor-content {
+  display: flex;
+  height: 100%;
+  background: $gray-800;
+  color: $white;
+}
+
+.editor-line-nums {
+  flex-shrink: 0;
+  position: relative;
+  height: 100%;
+  width: 30px;
+  text-align: center;
+  border-right: 2px solid lighten($gray-800, 3%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.editor-line-nums-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+
+.editor-textarea {
+  width: 100%;
+  height: 100%;
+  background: $gray-800;
+  padding: 10px;
+  border: 0;
+  color: $white;
+  white-space: nowrap;
+  word-spacing: 0.3em;
+  outline: none;
+  resize: none;
+}
+
+.editor-draggable {
+  flex: 1;
+  min-width: 12px !important;
+  height: 100vh;
+  background: $gray-700;
+  &:hover, :active, :focus {
+    cursor: e-resize;
+    animation: flash 2s infinite;
+  }
+}
+
+.dragging {
+  animation: flash 2s infinite;
+}
+
+@keyframes flash {
+  0% { background: $gray-700 }
+  50% { background: $gray-600 }
+  100% { background: $gray-700 }
+}
+
+.iframe-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0);
+}
+
+.codebin-logo {
+  height: 45px;
+  padding: 0 0.5em;
+}

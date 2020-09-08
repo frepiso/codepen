@@ -1,0 +1,14 @@
+@import '../../utils/bootstrap.min.css';
+@import '../../utils/_variables.scss';
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.navbar-container {
+  background: $gray-800;
+}
+
+.btn {
+  margin-right: 5px;
+}

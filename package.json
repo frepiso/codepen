@@ -1,0 +1,49 @@
+{
+  "name": "code-pen-clone",
+  "version": "0.1.0",
+  "engines": {
+    "node": "8.11.4"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "connect-mongo": "^2.0.3",
+    "dotenv": "^7.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1",
+    "history": "^4.9.0",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.4.22",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "heroku-postbuild": "",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "api": "nodemon --watch src/server src/server/server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "proxy": "http://localhost:81"
+}
